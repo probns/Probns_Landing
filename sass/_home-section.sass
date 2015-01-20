@@ -1,0 +1,401 @@
+.home-section
+	width: 100%
+	background: #bebebe
+	overflow: hidden
+	position: relative
+		position: center center
+
+	@media only screen and (max-width: 768px)
+		padding: 100px 0 45px
+		height: auto
+
+	@media only screen and (min-width: 768px)
+		padding: 225px 0 75px
+		height: 100%
+		min-height: 650px
+
+	.slider
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+
+	.slides, .slides li, .slides div
+		position: relative
+		width: 100%
+		height: 100%
+		display: block
+
+	.slides, .slides li, .slides div
+		z-index: 1
+
+	div
+		background:
+			position: center center !important
+
+	.flex-control-nav
+		width: 90%
+		z-index: 10
+		bottom: 20px
+		left: 0
+		right: 0
+		margin: 0 auto
+		text:
+			align: right
+
+		a
+			background: $blue
+			font:
+				size: 0
+
+			&.flex-active, &:hover
+				background: $dark-blue
+
+	/* Slides */
+
+	.mansion
+		@media only screen and (max-width: 1124px)
+			background:
+				size: auto 100% !important
+
+		@media only screen and (min-width: 1124px)
+			background:
+				size: 100% auto !important
+
+	.lake
+		@media only screen and (max-width: 990px)
+			background:
+				size: auto 100% !important
+
+		@media only screen and (min-width: 990px)
+			background:
+				size: 100% auto !important
+
+	article
+		position: relative
+		z-index: 10
+		padding:
+			top: 30px
+			left: 20px
+			right: 20px
+		background: rgba(13, 71, 161, 0.45)
+		color: #fff
+		margin: 0 0 20px
+
+		h1
+			margin:
+				bottom: 20px
+
+			@media only screen and (max-width: 600px)
+				font:
+					size: 33px
+			@media only screen and (min-width: 600px)
+				font:
+					size: 60px
+
+	.btn-content
+		position: relative
+		z-index: 10
+		@media only screen and (max-width: 992px)
+			text:
+				align: center		
+
+	.btn
+		+transition(all 0.3s)
+		+border-radius(0)
+		background: $green
+		color: #fff
+		border: 0 none
+		margin:
+			bottom: 20px
+		display: inline-block
+		padding: 6px 30px
+		font:
+			size: 28px
+			weight: bold
+
+		&:hover
+			background: #7cb342
+
+.divider
+	background: #2f99dd
+	color: #fff
+	padding: 20px 0 0
+
+.other-options
+	padding: 100px 0 0
+	position: relative
+
+	ul 
+		padding: 0
+		list-style-type: none
+
+	li
+		padding:
+			bottom: 50px
+
+	.listed
+		@media only screen and (max-width: 991px)
+			text:
+				align: center
+
+	.right
+		@media only screen and (min-width: 992px)
+			text:
+				align: right
+
+	.lancer-01
+		@media only screen and (max-width: 991px)
+			display: none
+
+	.lancer-02
+		@media only screen and (min-width: 992px)
+			display: none
+
+	strong
+		color: #0d47a1
+
+	section
+		text:
+			align: center
+
+	img
+		+transition(all 0.3s)
+		position: relative
+
+		@media only screen and (max-width: 400px)
+			width: 60%
+
+		@media only screen and (min-width: 400px) and (max-width: 600px)
+			margin: 50px 0 0
+			width: 50%
+
+		@media only screen and (min-width: 600px) and (max-width: 800px)
+			margin: 50px 0 0
+			width: 40%
+
+		@media only screen and (min-width: 800px) and (max-width: 991px)
+			margin: 20px 0 0
+			width: 30%
+
+		@media only screen and (min-width: 992px) 
+			margin: 50px 0 0
+			width: 70%
+
+.enlisted
+
+	section
+		padding: 30px 0
+
+		article
+			@media only screen and (min-width: 1024px)
+				padding: 100px 0 0
+
+	img
+		width: 100%
+
+	strong
+		color: #689f38
+
+	.minicoop-01
+		@media only screen and (max-width: 992px)
+			display: none
+
+	.minicoop-02
+		@media only screen and (min-width: 992px)
+			display: none
+
+.responsive
+	position: relative
+	overflow: hidden
+	width: 100%
+	color: #fff
+	background: #333333
+
+	.row
+		article
+			padding: 20px 20px 0
+			background: rgba(13, 71, 161, 0.45)
+			position: relative
+			z-index: 10
+
+	.tablet
+
+		@media only screen and (max-width: 1150px)
+			background:
+				size: auto 100% !important
+
+		@media only screen and (min-width: 1150px)
+			background:
+				size: 100% auto !important
+
+	.phones
+		@media only screen and (max-width: 1590px)
+			background:
+				size: auto 100% !important
+
+		@media only screen and (min-width: 1590px)
+			background:
+				size: 100% auto !important
+
+	.gift
+		@media only screen and (max-width: 1214px)
+			background:
+				size: auto 100% !important
+
+		@media only screen and (min-width: 1214px)
+			background:
+				size: 100% auto !important
+
+	.slider
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		z-index: 1
+		background:
+			position: center center !important
+
+		.slides, .slides li, .slides div
+			position: relative
+			width: 100%
+			height: 100%
+	
+	@media only screen and (max-width: 768px)
+		height: auto
+		padding: 80px 0
+		text:
+			align: center
+
+		.slider
+			display: none
+
+	@media only screen and (min-width: 768px)
+		min-height: 700px
+		height: 100%
+		padding: 160px 0
+
+
+		.slider
+			display: block
+
+	@media only screen and (max-width: 830px)
+		background:
+			size: auto 100%
+
+	@media only screen and (min-width: 830px)
+		background:
+			size: 100% auto
+
+	h5
+		padding:
+			top: 0
+
+.contact
+	background: url(../images/maps.jpg) no-repeat
+		position: center center
+		color: rgb(83,139,188)
+	color: #fff
+	padding: 40px 0 70px
+
+	&.home-contact
+		@media only screen and (max-width: 1000px)
+			background:
+				size: auto 100%
+
+		@media only screen and (min-width: 1000px)
+			background:
+				size:  100% auto
+
+	&.agents-contact
+		@media only screen and (max-width: 1210px)
+			background:
+				size: auto 100%
+
+		@media only screen and (min-width: 1210px)
+			background:
+				size:  100% auto
+
+	@media only screen and (max-width: 992px)
+		text:
+			align: center
+
+	ul
+		list-style-type: none
+		padding: 0 
+
+	li
+		padding: 0 0 20px
+		font:
+			weight: bold
+
+	h4
+		margin:
+			bottom: 60px
+		text:
+			align: center
+
+	h5
+		padding: 0
+		font:
+			weight: bold
+
+	a
+		color: #fff
+
+	i
+		padding: 0 10px 0 0
+		font:
+			size: 25px
+
+	form
+		padding:
+			bottom: 20px
+
+	input[type="text"], input[type="email"], textarea
+		padding: 5px 8px
+		border: 0 none
+		color: #212121
+		font:
+			size: 20px
+		margin:
+			bottom: 20px
+
+	input[type="text"], input[type="email"], .btn
+		display: block
+		width: 100%
+		color: #000
+
+	input[type="submit"]
+		background: #8bc34a
+		border: 0 none
+		padding: 10px 15px
+		text:
+			transform: capitalize
+		font:
+			size: 20px
+
+	textarea
+		min-height: 150px
+		max-height: 150px
+		display: block
+		min-width: 100%
+		max-width: 100%
+		color: #000
+
+	.btn
+		+border-radius(0)
+		border: 0 none
+		color: #fff
+		font:
+			size: 20px
+
+	.buy
+		background: #03a9f4
+		margin:
+			bottom: 25px
+
+	.sell
+		background: #8bc34a

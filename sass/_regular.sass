@@ -1,0 +1,160 @@
+.regular-body
+	background: #fff
+	width: 100%
+	height: auto
+	position: relative
+	margin: 0
+	padding: 0
+
+.regular-header
+	z-index: 1000
+	+border-radius(0)
+	+box-shadow(rgba(0,0,0, 0.2) 0 0  12px 3px)
+	display: block
+	width: 100%
+
+	h1
+		padding: 0
+
+	@media only screen and (min-width: 768px)
+		position: fixed
+
+	.navbar-default
+		+border-radius(0)
+		background: #545454
+		margin: 0
+		border: 0 none
+
+	.container
+		padding: 15px 0 0
+
+	.navbar-brand
+		padding: 0 20px
+
+	img
+		width: 104px
+
+	.login
+		+transition(all 0.3s)
+		+border-radius(0px)
+		color: #fff
+		padding: 5px 13px
+		margin-right: 20px
+		background: $blue
+		font:
+			size: 18px
+			weight: bold
+
+		&:hover
+			background: $dark-blue
+			color: #fff
+			text:
+				decoration: none
+
+	h1
+		color: #fff
+		font:
+			family: 'museo700'
+			weight: normal
+
+.regular-content
+	overflow: hidden
+
+	@media only screen and (max-width: 768px)
+		padding: 20px 0
+	
+	@media only screen and (min-width: 768px)
+		padding: 140px 0 20px
+
+	.text-content
+		padding: 20px
+		text:
+			align: justify
+
+	h1, h2, h3, h4, h5, h6
+		color: #5b5d61
+
+	h1, h2
+		font:
+			size: 35px
+
+	h3, h4
+		font:
+			size: 30px
+
+	h5, h6
+		font:
+			size: 20px
+
+	h1, h3, h5
+		text:
+			align: center
+
+	p, ul, ol
+		color: #7e8288
+
+	li
+		margin:
+			bottom: 10px
+
+	p
+		font:
+			size: 20px
+		margin: 
+			bottom: 25px
+
+	span
+		color: #3497db
+
+	.main-title
+		width: 100%
+		height: auto
+		text-align: center
+		color: #2D8CD6
+
+		@media only screen and (max-width: 768px)
+			font:
+				size: 40px
+		
+		@media only screen and (min-width: 768px)
+			font:
+				size: 70px
+
+	.divider-content
+		width: 100%
+		height: auto
+		margin: 0 0 40px 
+		position: relative
+		z-index: 1
+		text:
+			align: center
+
+		img
+			+border-radius(40px)
+			width: 53px
+			height: auto
+			border: 6px solid #fff
+			z-index: 20
+
+		&::after
+			position: absolute
+			content: ""
+			background: rgba(0, 0, 0, 0.1)
+			width: 100%
+			height: 1px
+			left: 0
+			top: 0
+			bottom: 0
+			margin: auto 0
+			z-index: -1
+
+	.button
+		+border-radius(3px)
+		background: #2c8bd6
+		color: #fff
+		padding: 5px 10px
+		text:
+			decoration: none
+		margin: 0 10px
+
+

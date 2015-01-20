@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ProBns | La Primera Plataforma de Sistema de Listados Múltiples en Guatemala.</title>
+	<link rel="stylesheet" href="../stylesheets/style.css" type="text/css">
+	<link rel="stylesheet" href="../stylesheets/animate.css" type="text/css">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap.js" type="text/javascript"></script>
+	<script src="../js/smoothScroll.js" type="text/javascript"></script>
+	<script src="../js/waypoints.js" type="text/javascript"></script>
+	<script src="../js/jquery.flexslider-min.js" type="text/javascript"></script>
+	<script src="../js/wow.js" type="text/javascript"></script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-58421225-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<script>
+		$(function(){
+	        $('a.smoothScroll').smoothScroll({	
+	          offset: -65,	  
+			  scrollTarget: $(this).val()
+		   });
+	       
+	       // Waypoints
+	       $('.extended').waypoint(  
+	        function(direction) {
+	        if (direction ==='down') {            
+	            var wayID = $(this).attr('id');            
+	        } else {
+	            var previous = $(this).prev();
+	            var wayID = $(previous).attr('id');                    
+	        }
+	            $('.current').removeClass('current');
+	            $('.main_nav a[href=#'+wayID+']').addClass('current');
+	        }, { offset: '40%' });
+	       
+	       
+	       
+	       /// StickNav  
+	       var stickyNavTop = $('#home-header').offset().top;  
+	  
+	        var stickyNav = function(){  
+	        var scrollTop = $(window).scrollTop() - 560;  
+	       
+	        if (scrollTop > stickyNavTop) {   
+	            $('.extended-header').slideDown();  
+	        } else {  
+	            $('.extended-header').slideUp();   
+	        }  
+	    };       
+	    stickyNav(); 
+	       $(window).scroll(function() {
+	            stickyNav();  
+	        });  
+	    });
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('.slider').flexslider({
+				directionNav: false,
+				controlNav: false
+
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#home-header .navbar-button').click(function(event) {
+				event.preventDefault();
+				$('#home-header nav').addClass("visible");
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('#home-header .close-button').click(function(event) {
+				event.preventDefault();
+				$('#home-header nav').removeClass("visible");
+			});
+		});
+	</script>
+	<script>
+		new WOW().init();
+	</script>
+</head>
+<body>
+	<header class="home-header extended-header" style="display: none;">
+		<div class="container">
+			<div class="row">
+				<a href="#home" class="logo smoothScroll">
+					<h1>Probns</h1></a>
+				<nav>
+					<ul class="main_nav">
+						<li><a class="smoothScroll" href="#problems">¿Qué sucede?</a></li>
+				        <li><a class="smoothScroll" href="#solutions">Soluciones</a></li>
+			            <li><a href="../" class="smoothScroll">¿Buscas Inmuebles?</a></li>
+			            <li><a class="smoothScroll" href="../quienes-somos">Quiénes Somos</a></li>
+			            <li><a class="smoothScroll menu-button" href="#suscribe">Suscríbete</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>		
+	</header>
+	<header class="home-header" id="home-header">
+		<div class="container">
+			<div class="row">
+				<a href="#home" class="logo smoothScroll">
+					<h1>Probns</h1></a>
+				<nav>
+					<div class="close-content">
+						<a href="#" class="close-button"><span class="fa fa-close"></span></a>
+					</div>
+					<ul class="main_nav">
+						<li><a class="smoothScroll" href="#problems">¿Qué sucede?</a></li>
+				        <li><a class="smoothScroll" href="#solutions">Soluciones</a></li>
+			            <li><a href="../" class="smoothScroll">¿Buscas Inmuebles?</a></li>
+			            <li><a class="smoothScroll" href="../quienes-somos">Quiénes Somos</a></li>
+			            <li><a class="smoothScroll menu-button" href="#suscribe">Suscríbete</a></li>
+					</ul>
+				</nav>
+				<a href="#" class="navbar-button"><span class="fa fa-bars"></span></a>
+			</div>
+		</div>		
+	</header>
+	<div class="home-section" id="home">
+		<div class="slider">
+			<ul class="slides">
+				<li><div class="mansion" style="background: url('../images/home-background.jpg') no-repeat;"></div></li>
+				<li><div class="lake" style="background: url('../images/lake-background.jpg') no-repeat;"></div></li>
+				<li><div class="lake" style="background: url('../images/husk-background.jpg') no-repeat;"></div></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<article class="">
+						<h1>¿Quieres Vender Más Propiedades?</h1>
+						<h5>ProBns, la Primera Plataforma de Sistema de Listados Múltiples en Guatemala.</h5>
+					</article>
+				</div>
+				<div class="btn-content col-xs-12">
+					<div class="">
+						<a href="#suscribe" class="btn btn-default smoothScroll">Suscríbete</a>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+	<div class="extended" id="problems">
+		<div class="divider">
+			<div class="container">
+				<div class="row">
+					<div class="wow bounceInLeft">
+						<h2 class="col-xs-12">Quieres vender una propiedad, pero…</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="other-options">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-4 listed left">
+						<ul>
+							<li><div class="wow fadeInDown"><p><strong>Pierdes mucho tiempo</strong> mostrando propiedades y no consigues cerrar el trato.</p></div></li>
+							<li><div class="wow fadeInUp"><p><strong>No logras </strong>conseguir al comprador.</p></div></li>
+						</ul>
+					</div>
+					<section class="col-xs-12 col-md-4 lancer-01 wow fadeInUp">
+						<img src="../images/woman.png" alt="">
+					</section>
+					<div class="col-xs-12 col-md-4 listed right">
+						<ul>
+							<li><div class="wow fadeInDown"><p>Las fotos de la propiedad no muestran como es <strong>realmente</strong>.</p></div></li>
+							<li><div class="wow fadeInUp"><p>No cuentas con las <strong>herramientas apropiadas</strong> y gastas mucho para darte a conocer.</p></div></li>
+						</ul>
+					</div>
+					<section class="col-xs-12 col-md-4 lancer-02 wow fadeInUp">
+						<img src="../images/woman.png" alt="">
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="extended" id="solutions">
+		<div class="divider">
+			<div class="container">
+				<div class="row">
+					<div class="wow fadeInRight">
+						<h2 class="col-xs-12">Cuando vendes en Probns...</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="enlisted">
+			<section>
+				<div class="container">
+					<div class="row">
+						<article class="col-xs-12 col-md-6">
+							<div class="wow fadeInLeft">
+								<p>Puedes buscar <strong>todas las propiedades</strong> aunque no sean de tu listado.</p>
+							</div>
+						</article>
+						<div class="col-xs-12 col-md-5 col-md-offset-1"><div class="wow fadeInRight"><img src="../images/section-01.jpg" alt=""></div></div>
+					</div>
+				</div>
+			</section>
+			<section class="minicoop-01">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-5"><div class="wow fadeInLeft"><img src="../images/camera.jpg" alt=""></div></div>
+						<article class="col-xs-12 col-md-6 col-md-offset-1">
+							<div class="wow fadeInRight"><p>Tomamos <strong>fotos</strong> y <strong>videos</strong> por ti.</p></div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="minicoop-02">
+				<div class="container">
+					<div class="row">
+						<article class="col-xs-12 col-md-6 col-md-offset-1">
+							<div class="wow fadeInLeft"><p>Tomamos <strong>fotos</strong> y <strong>videos</strong> por ti.</p></div>
+						</article>
+						<div class="col-xs-12 col-md-5"><div class="wow fadeInRight"><img src="../images/camera.jpg" alt=""></div></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<div class="row">
+						<article class="col-xs-12 col-md-6">
+							<div class="wow fadeInLeft"><p>El buscador al encontrar una propiedad de tu listado se comunica <strong>diréctamente contigo</strong>.</p></div>
+						</article>
+						<div class="col-xs-12 col-md-5 col-md-offset-1"><div class="wow fadeInRight"><img src="../images/hands.jpg" alt=""></div></div>
+					</div>
+				</div>
+			</section>
+			<section class="minicoop-01">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-5"><div class="wow fadeInLeft"><img src="../images/arquitecto.jpg" alt=""></div></div>
+						<article class="col-xs-12 col-md-6 col-md-offset-1">
+							<div class="wow fadeInRight"><p>Relación más directa con los clientes. Conocerás con exactitud lo que el comprador <strong>necesita</strong>.</p></div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="minicoop-02">
+				<div class="container">
+					<div class="row">
+						<article class="col-xs-12 col-md-6 col-md-offset-1">
+							<div class="wow fadeInLeft">
+								<p>Relación más directa con los clientes. Conocerás con exactitud lo que el comprador <strong>necesita</strong>.</p>
+							</div>
+						</article>
+						<div class="col-xs-12 col-md-5"><div class="wow fadeInRight"><img src="../images/arquitecto.jpg" alt=""></div></div>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="container">
+					<div class="row">
+						<article class="col-xs-12 col-md-6">
+							<div class="fadeInLeft wow"><p><strong>Reportes</strong> y <strong>estadísticas</strong> disponibles en todo momento y en todo lugar.</p></div>
+						</article>
+						<div class="col-xs-12 col-md-5 col-md-offset-1"><div class="wow fadeInRight"><img src="../images/reports.jpg" alt=""></div></div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="responsive">
+		<div class="slider">
+			<ul class="slides">
+				<li><div class="tablet" style="background: url('../images/responsive.jpg') no-repeat; background-position: center center;"></div></li>
+				<li><div class="phones" style="background: url('../images/phones.jpg') no-repeat; background-position: center center;"></div></li>
+				<li><div class="gift" style="background: url('../images/gift.jpg') no-repeat; background-position: center center;"></div></li>
+			</ul>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0">
+					<article class=" wow fadeInUp">
+						<h2>Disponible en web y móviles</h2>
+						<h5>Con nuestra aplicación optimizada para cualquier dispositivo te ayudaremos a buscar tu casa estés donde estés.</h5>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact extended agents-contact" id="suscribe">
+		<div class="container">
+			<div class="row">
+				<div class="wow fadeInDown"><h4>Encuentra la casa que buscas antes de que alguien más lo haga.<br> Suscríbete para formar parte de la experiencia ProBns.</h4></div>
+				<div class="col-xs-12 col-md-5 col-md-offset-1">
+					<div class="wow fadeInDown">
+						<form action="../php/proceso_agente.php" method="post" name="agentesForm">
+							<input id="txtNombre" required name="txtNombre" type="text" placeholder="Nombre">
+							<input id="txtCorreo" required name="txtCorreo" type="email" placeholder="Correo Electrónico">
+							<input id="txtEmpresa" required name="txtEmpresa" type="text" placeholder="Lugar de trabajo">
+							<textarea id="txtMensaje" name="txtMensaje" id="" cols="30" rows="10" placeholder="Escribe un mensaje..."></textarea>
+							<input type="submit" value="suscríbete">
+						</form>
+					</div>
+				</div>
+				<div class="col-xs-12 col-md-4 col-md-offset-1">
+					<div class="wow fadeInDown">
+						<ul>
+							<li><h5>Contáctanos</h5></li>
+							<!-- <li><i class="fa fa-2x fa-phone"></i><span>+502 5865 7593</span></li> -->
+							<li><i class="fa fa-2x fa-envelope"></i>ventas@probns.com</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+       <div class="wow fadeInDown">
+	       	<p>Derechos reservados ProBns 2014</p>
+       </div>
+    </footer>
+</body>
+</html>
