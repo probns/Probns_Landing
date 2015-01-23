@@ -7,8 +7,8 @@
 	$status = 1;
 	
 	try {
-	    $gbd = new PDO('mysql:host=localhost;dbname=probns', 'rodblanco27', 'Kipokipo1');
-
+	    $gbd = new PDO('mysql:host=mujerdelpelotero.com;dbname=probns', 'adminProbns', 'AdminProbns2015');
+	    echo "conección exitosa";
 	    $sql = $gbd->prepare("INSERT INTO USUARIOS (idTipoUsuario,Nombre, Email, zonaInteres, Status) 
 	    					  VALUES(:tipoUsuario,:nombre, :email, :zonaInteres, :status)");
 	    $sql->bindParam(':tipoUsuario', $tipoUsuario);
